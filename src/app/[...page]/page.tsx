@@ -29,7 +29,7 @@ export default async function Page(props: PageProps) {
 
   return (
     <>
-    <h1>Hello</h1>
+    <h1>Hello 2</h1>
       {/* Render the Builder page */}
       <RenderBuilderContent content={content} model={builderModelName} />
     </>
