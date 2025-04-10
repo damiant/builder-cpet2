@@ -15,7 +15,7 @@ export default async function Page(props: PageProps) {
 
   const content = await builder
     // Get the page content from Builder with the specified options
-    .get(builderModelName, {
+    .get(builderModelName, {          
       userAttributes: {
         // Use the page path specified in the URL to fetch the content
         urlPath: "/" + ((await props?.params)?.page?.join("/") || ""),
@@ -25,8 +25,11 @@ export default async function Page(props: PageProps) {
     // Convert the result to a promise
     .toPromise();
 
+    console.log("content", content);
+
   return (
     <>
+    <h1>Hello</h1>
       {/* Render the Builder page */}
       <RenderBuilderContent content={content} model={builderModelName} />
     </>
